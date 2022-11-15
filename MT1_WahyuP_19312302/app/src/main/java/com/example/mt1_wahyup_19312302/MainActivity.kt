@@ -43,7 +43,6 @@ class MainActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 Surface(modifier = Modifier.fillMaxSize()) {
                     val items = ArrayList<DataSlide>()
-
                     items.add(
                         DataSlide(
                             R.drawable.mieayam,
@@ -102,7 +101,6 @@ fun DataSlidePager(
     pagerState: PagerState,
     modifier: Modifier = Modifier
 ) {
-
     Box(modifier = modifier) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             HorizontalPager(state = pagerState) { page ->
@@ -120,18 +118,15 @@ fun DataSlidePager(
                         modifier = Modifier
                             .fillMaxWidth()
                     )
-
-
                 }
             }
-
         }
 
         Box(modifier = Modifier.align(Alignment.BottomCenter)) {
             Card(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(340.dp),
+                    .height(370.dp),
                 backgroundColor = Color.White,
                 elevation = 0.dp,
                 shape = BottomCardShape.large
@@ -190,7 +185,7 @@ fun DataSlidePager(
                                         fontWeight = FontWeight.SemiBold
                                     )
                                 }
-
+                            // fungsi ini untuk next dari currentPage
                                 OutlinedButton(
                                     onClick = {
                                         GlobalScope.launch {
@@ -241,7 +236,6 @@ fun DataSlidePager(
                     }
                 }
             }
-
         }
     }
 }
